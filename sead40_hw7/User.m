@@ -10,4 +10,16 @@
 
 @implementation User
 
+
+-(instancetype)initWithName:(NSString *)username profileImage:(UIImage *)profileImage{
+  
+  if (self = [super init]) {
+    _username = username;
+    _profileImage = profileImage;
+    
+  }
+  return self;
+  
+}
+
 @end

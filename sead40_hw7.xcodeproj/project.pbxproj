@@ -14,6 +14,7 @@
 		6C8319F11BA882580064CEA3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C8319EF1BA882580064CEA3 /* LaunchScreen.xib */; };
 		6C8319FD1BA882580064CEA3 /* sead40_hw7Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8319FC1BA882580064CEA3 /* sead40_hw7Tests.m */; };
 		6C831A0B1BA88D8F0064CEA3 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A0A1BA88D8F0064CEA3 /* User.m */; };
+		6C831A0E1BA88FDD0064CEA3 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A0D1BA88FDD0064CEA3 /* Question.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		6C8319FC1BA882580064CEA3 /* sead40_hw7Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sead40_hw7Tests.m; sourceTree = "<group>"; };
 		6C831A091BA88D8F0064CEA3 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		6C831A0A1BA88D8F0064CEA3 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
+		6C831A0C1BA88FDD0064CEA3 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
+		6C831A0D1BA88FDD0064CEA3 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +126,8 @@
 			children = (
 				6C831A091BA88D8F0064CEA3 /* User.h */,
 				6C831A0A1BA88D8F0064CEA3 /* User.m */,
+				6C831A0C1BA88FDD0064CEA3 /* Question.h */,
+				6C831A0D1BA88FDD0064CEA3 /* Question.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -244,6 +249,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C831A0B1BA88D8F0064CEA3 /* User.m in Sources */,
+				6C831A0E1BA88FDD0064CEA3 /* Question.m in Sources */,
 				6C8319E61BA882580064CEA3 /* AppDelegate.m in Sources */,
 				6C8319E31BA882580064CEA3 /* main.m in Sources */,
 			);

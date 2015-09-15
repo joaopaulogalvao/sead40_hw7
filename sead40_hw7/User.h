@@ -14,4 +14,6 @@
 @property(strong, nonatomic) NSString *username;
 @property(strong, nonatomic) UIImage *profileImage;
 
+- (instancetype)initWithName:(NSString *)username profileImage:(UIImage *)profileImage;
+
 @end
