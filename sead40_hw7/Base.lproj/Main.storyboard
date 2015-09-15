@@ -21,7 +21,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="132" y="347"/>
+            <point key="canvasLocation" x="-524" y="375"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="Ops-kF-PCo">
@@ -102,10 +102,30 @@
                             <outlet property="delegate" destination="vgB-eJ-Lis" id="0Rw-PJ-ISx"/>
                         </connections>
                     </tableView>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F4C-wy-19M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="791" y="180"/>
+            <point key="canvasLocation" x="221" y="375"/>
+        </scene>
+        <!--Question Search View Controller-->
+        <scene sceneID="ERy-fS-Yft">
+            <objects>
+                <viewController storyboardIdentifier="QuestionSearch" useStoryboardIdentifierAsRestorationIdentifier="YES" id="UKB-bE-L7A" customClass="QuestionSearchViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p5V-rQ-eh2"/>
+                        <viewControllerLayoutGuide type="bottom" id="eEB-Kq-oAz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Umd-M7-lf2">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yLC-Hd-X3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="928" y="-536"/>
         </scene>
     </scenes>
 </document>
