@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		6C8319E31BA882580064CEA3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8319E21BA882580064CEA3 /* main.m */; };
 		6C8319E61BA882580064CEA3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8319E51BA882580064CEA3 /* AppDelegate.m */; };
-		6C8319E91BA882580064CEA3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8319E81BA882580064CEA3 /* ViewController.m */; };
 		6C8319EC1BA882580064CEA3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C8319EA1BA882580064CEA3 /* Main.storyboard */; };
 		6C8319EE1BA882580064CEA3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C8319ED1BA882580064CEA3 /* Images.xcassets */; };
 		6C8319F11BA882580064CEA3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C8319EF1BA882580064CEA3 /* LaunchScreen.xib */; };
 		6C8319FD1BA882580064CEA3 /* sead40_hw7Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8319FC1BA882580064CEA3 /* sead40_hw7Tests.m */; };
+		6C831A0B1BA88D8F0064CEA3 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A0A1BA88D8F0064CEA3 /* User.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		6C8319E21BA882580064CEA3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6C8319E41BA882580064CEA3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6C8319E51BA882580064CEA3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		6C8319E71BA882580064CEA3 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6C8319E81BA882580064CEA3 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6C8319EB1BA882580064CEA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6C8319ED1BA882580064CEA3 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		6C8319F01BA882580064CEA3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		6C8319F61BA882580064CEA3 /* sead40_hw7Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sead40_hw7Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C8319FB1BA882580064CEA3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C8319FC1BA882580064CEA3 /* sead40_hw7Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = sead40_hw7Tests.m; sourceTree = "<group>"; };
+		6C831A091BA88D8F0064CEA3 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
+		6C831A0A1BA88D8F0064CEA3 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +121,8 @@
 		6C831A061BA884330064CEA3 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6C831A091BA88D8F0064CEA3 /* User.h */,
+				6C831A0A1BA88D8F0064CEA3 /* User.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -137,8 +139,6 @@
 		6C831A081BA884470064CEA3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				6C8319E71BA882580064CEA3 /* ViewController.h */,
-				6C8319E81BA882580064CEA3 /* ViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -243,7 +243,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C8319E91BA882580064CEA3 /* ViewController.m in Sources */,
+				6C831A0B1BA88D8F0064CEA3 /* User.m in Sources */,
 				6C8319E61BA882580064CEA3 /* AppDelegate.m in Sources */,
 				6C8319E31BA882580064CEA3 /* main.m in Sources */,
 			);
