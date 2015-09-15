@@ -17,6 +17,7 @@
 		6C831A0E1BA88FDD0064CEA3 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A0D1BA88FDD0064CEA3 /* Question.m */; };
 		6C831A111BA8953B0064CEA3 /* BurgerMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A101BA8953B0064CEA3 /* BurgerMenuViewController.m */; };
 		6C831A141BA899030064CEA3 /* QuestionSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A131BA899030064CEA3 /* QuestionSearchViewController.m */; };
+		6C831A171BA8B5DB0064CEA3 /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A161BA8B5DB0064CEA3 /* MyQuestionsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,8 @@
 		6C831A101BA8953B0064CEA3 /* BurgerMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurgerMenuViewController.m; sourceTree = "<group>"; };
 		6C831A121BA899030064CEA3 /* QuestionSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionSearchViewController.h; sourceTree = "<group>"; };
 		6C831A131BA899030064CEA3 /* QuestionSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionSearchViewController.m; sourceTree = "<group>"; };
+		6C831A151BA8B5DB0064CEA3 /* MyQuestionsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsViewController.h; sourceTree = "<group>"; };
+		6C831A161BA8B5DB0064CEA3 /* MyQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +157,8 @@
 				6C831A101BA8953B0064CEA3 /* BurgerMenuViewController.m */,
 				6C831A121BA899030064CEA3 /* QuestionSearchViewController.h */,
 				6C831A131BA899030064CEA3 /* QuestionSearchViewController.m */,
+				6C831A151BA8B5DB0064CEA3 /* MyQuestionsViewController.h */,
+				6C831A161BA8B5DB0064CEA3 /* MyQuestionsViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 				6C831A0E1BA88FDD0064CEA3 /* Question.m in Sources */,
 				6C8319E61BA882580064CEA3 /* AppDelegate.m in Sources */,
 				6C8319E31BA882580064CEA3 /* main.m in Sources */,
+				6C831A171BA8B5DB0064CEA3 /* MyQuestionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
