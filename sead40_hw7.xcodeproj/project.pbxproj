@@ -83,11 +83,10 @@
 			children = (
 				6C8319E41BA882580064CEA3 /* AppDelegate.h */,
 				6C8319E51BA882580064CEA3 /* AppDelegate.m */,
-				6C8319E71BA882580064CEA3 /* ViewController.h */,
-				6C8319E81BA882580064CEA3 /* ViewController.m */,
-				6C8319EA1BA882580064CEA3 /* Main.storyboard */,
+				6C831A061BA884330064CEA3 /* Model */,
+				6C831A071BA8843C0064CEA3 /* View */,
+				6C831A081BA884470064CEA3 /* Controller */,
 				6C8319ED1BA882580064CEA3 /* Images.xcassets */,
-				6C8319EF1BA882580064CEA3 /* LaunchScreen.xib */,
 				6C8319E01BA882580064CEA3 /* Supporting Files */,
 			);
 			path = sead40_hw7;
@@ -117,6 +116,31 @@
 				6C8319FB1BA882580064CEA3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6C831A061BA884330064CEA3 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6C831A071BA8843C0064CEA3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				6C8319EF1BA882580064CEA3 /* LaunchScreen.xib */,
+				6C8319EA1BA882580064CEA3 /* Main.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		6C831A081BA884470064CEA3 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6C8319E71BA882580064CEA3 /* ViewController.h */,
+				6C8319E81BA882580064CEA3 /* ViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
