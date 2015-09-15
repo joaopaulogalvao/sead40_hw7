@@ -114,6 +114,7 @@ CGFloat const kburgerButtonHeight = 50.0;
       self.topViewController.view.center = CGPointMake(self.topViewController.view.center.x + translation.x, self.topViewController.view.center.y);
       [sender setTranslation:CGPointZero inView:self.topViewController.view];
     } else {
+      
       NSLog(@"Velocity: %f", velocity.x);
       NSLog(@"Translation: %f", translation.x);
       self.topViewController.view.center = CGPointMake(self.topViewController.view.center.x + translation.x, self.topViewController.view.center.y);
