@@ -15,6 +15,7 @@
 		6C8319FD1BA882580064CEA3 /* sead40_hw7Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8319FC1BA882580064CEA3 /* sead40_hw7Tests.m */; };
 		6C831A0B1BA88D8F0064CEA3 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A0A1BA88D8F0064CEA3 /* User.m */; };
 		6C831A0E1BA88FDD0064CEA3 /* Question.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A0D1BA88FDD0064CEA3 /* Question.m */; };
+		6C831A111BA8953B0064CEA3 /* BurgerMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A101BA8953B0064CEA3 /* BurgerMenuViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +44,8 @@
 		6C831A0A1BA88D8F0064CEA3 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		6C831A0C1BA88FDD0064CEA3 /* Question.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Question.h; sourceTree = "<group>"; };
 		6C831A0D1BA88FDD0064CEA3 /* Question.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Question.m; sourceTree = "<group>"; };
+		6C831A0F1BA8953B0064CEA3 /* BurgerMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BurgerMenuViewController.h; sourceTree = "<group>"; };
+		6C831A101BA8953B0064CEA3 /* BurgerMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BurgerMenuViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,6 +147,8 @@
 		6C831A081BA884470064CEA3 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				6C831A0F1BA8953B0064CEA3 /* BurgerMenuViewController.h */,
+				6C831A101BA8953B0064CEA3 /* BurgerMenuViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -249,6 +254,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C831A0B1BA88D8F0064CEA3 /* User.m in Sources */,
+				6C831A111BA8953B0064CEA3 /* BurgerMenuViewController.m in Sources */,
 				6C831A0E1BA88FDD0064CEA3 /* Question.m in Sources */,
 				6C8319E61BA882580064CEA3 /* AppDelegate.m in Sources */,
 				6C8319E31BA882580064CEA3 /* main.m in Sources */,
