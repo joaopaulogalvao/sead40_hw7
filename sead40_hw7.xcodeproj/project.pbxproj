@@ -20,6 +20,7 @@
 		6C831A141BA899030064CEA3 /* QuestionSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A131BA899030064CEA3 /* QuestionSearchViewController.m */; };
 		6C831A171BA8B5DB0064CEA3 /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A161BA8B5DB0064CEA3 /* MyQuestionsViewController.m */; };
 		6C831A1A1BA8BE180064CEA3 /* StackOverFlowService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A191BA8BE180064CEA3 /* StackOverFlowService.m */; };
+		6C831A1D1BA8ECFB0064CEA3 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A1C1BA8ECFB0064CEA3 /* WebViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,8 @@
 		6C831A161BA8B5DB0064CEA3 /* MyQuestionsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsViewController.m; sourceTree = "<group>"; };
 		6C831A181BA8BE180064CEA3 /* StackOverFlowService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackOverFlowService.h; sourceTree = "<group>"; };
 		6C831A191BA8BE180064CEA3 /* StackOverFlowService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOverFlowService.m; sourceTree = "<group>"; };
+		6C831A1B1BA8ECFB0064CEA3 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		6C831A1C1BA8ECFB0064CEA3 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		8291DFA5112FD058EA8FC4E8 /* Pods-sead40_hw7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sead40_hw7.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sead40_hw7/Pods-sead40_hw7.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -171,6 +174,8 @@
 				6C831A161BA8B5DB0064CEA3 /* MyQuestionsViewController.m */,
 				6C831A181BA8BE180064CEA3 /* StackOverFlowService.h */,
 				6C831A191BA8BE180064CEA3 /* StackOverFlowService.m */,
+				6C831A1B1BA8ECFB0064CEA3 /* WebViewController.h */,
+				6C831A1C1BA8ECFB0064CEA3 /* WebViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -331,6 +336,7 @@
 				6C831A0B1BA88D8F0064CEA3 /* User.m in Sources */,
 				6C831A111BA8953B0064CEA3 /* BurgerMenuViewController.m in Sources */,
 				6C831A0E1BA88FDD0064CEA3 /* Question.m in Sources */,
+				6C831A1D1BA8ECFB0064CEA3 /* WebViewController.m in Sources */,
 				6C831A1A1BA8BE180064CEA3 /* StackOverFlowService.m in Sources */,
 				6C8319E61BA882580064CEA3 /* AppDelegate.m in Sources */,
 				6C8319E31BA882580064CEA3 /* main.m in Sources */,

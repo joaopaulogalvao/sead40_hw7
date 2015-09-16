@@ -34,6 +34,8 @@ CGFloat const kburgerButtonHeight = 50.0;
   //Instantiate the main menu
   UITableViewController *mainMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainMenu"];
   mainMenuViewController.tableView.delegate = self;
+  UINavigationBar *mainMenuNavBar = [[UINavigationBar alloc]init];
+  [mainMenuViewController.view addSubview:mainMenuNavBar];
   
   //Add it as a child view controller
   [self addChildViewController:mainMenuViewController];
@@ -110,14 +112,14 @@ CGFloat const kburgerButtonHeight = 50.0;
   
   // Make the view move on x only, if the velocity is greater than zero
   if (sender.state == UIGestureRecognizerStateChanged) {
-    if (velocity.x > 0) {
+    if (velocity.x > 0 || self.topViewController.view.frame.origin.x > 0) {
       self.topViewController.view.center = CGPointMake(self.topViewController.view.center.x + translation.x, self.topViewController.view.center.y);
       [sender setTranslation:CGPointZero inView:self.topViewController.view];
     } else {
       
       NSLog(@"Velocity: %f", velocity.x);
       NSLog(@"Translation: %f", translation.x);
-      self.topViewController.view.center = CGPointMake(self.topViewController.view.center.x + translation.x, self.topViewController.view.center.y);
+//      self.topViewController.view.center = CGPointMake(self.topViewController.view.center.x + translation.x, self.topViewController.view.center.y);
       [sender setTranslation:CGPointZero inView:self.topViewController.view];
     }
   }
@@ -136,7 +138,9 @@ CGFloat const kburgerButtonHeight = 50.0;
         
         // Add the gesture after the animation is finished, so you can tap to close again
         UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapToCloseMenu:)];
+//        UIPanGestureRecognizer *panToClose = [[UIPanGestureRecognizer alloc]initWithTarget:self action:@selector(panToCloseMenu:)];
         [self.topViewController.view addGestureRecognizer:tap];
+        //[self.topViewController.view addGestureRecognizer:panToClose];
         self.burgerButton.userInteractionEnabled = false;
         
       }];
@@ -146,7 +150,8 @@ CGFloat const kburgerButtonHeight = 50.0;
       [UIView animateWithDuration:ktimeToSlideMenuOpen animations:^{
         self.topViewController.view.center = CGPointMake(self.view.center.x, self.topViewController.view.center.y);
       } completion:^(BOOL finished) {
-        
+        // Add interaction to button again
+        self.burgerButton.userInteractionEnabled = true;
       }];
     }
   }
