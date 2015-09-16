@@ -21,6 +21,7 @@
 		6C831A171BA8B5DB0064CEA3 /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A161BA8B5DB0064CEA3 /* MyQuestionsViewController.m */; };
 		6C831A1A1BA8BE180064CEA3 /* StackOverFlowService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A191BA8BE180064CEA3 /* StackOverFlowService.m */; };
 		6C831A1D1BA8ECFB0064CEA3 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A1C1BA8ECFB0064CEA3 /* WebViewController.m */; };
+		6C831A231BA9CD910064CEA3 /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A221BA9CD910064CEA3 /* MyProfileViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,8 @@
 		6C831A191BA8BE180064CEA3 /* StackOverFlowService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackOverFlowService.m; sourceTree = "<group>"; };
 		6C831A1B1BA8ECFB0064CEA3 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
 		6C831A1C1BA8ECFB0064CEA3 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		6C831A211BA9CD910064CEA3 /* MyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileViewController.h; sourceTree = "<group>"; };
+		6C831A221BA9CD910064CEA3 /* MyProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileViewController.m; sourceTree = "<group>"; };
 		8291DFA5112FD058EA8FC4E8 /* Pods-sead40_hw7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sead40_hw7.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sead40_hw7/Pods-sead40_hw7.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +179,8 @@
 				6C831A191BA8BE180064CEA3 /* StackOverFlowService.m */,
 				6C831A1B1BA8ECFB0064CEA3 /* WebViewController.h */,
 				6C831A1C1BA8ECFB0064CEA3 /* WebViewController.m */,
+				6C831A211BA9CD910064CEA3 /* MyProfileViewController.h */,
+				6C831A221BA9CD910064CEA3 /* MyProfileViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -334,6 +339,7 @@
 			files = (
 				6C831A141BA899030064CEA3 /* QuestionSearchViewController.m in Sources */,
 				6C831A0B1BA88D8F0064CEA3 /* User.m in Sources */,
+				6C831A231BA9CD910064CEA3 /* MyProfileViewController.m in Sources */,
 				6C831A111BA8953B0064CEA3 /* BurgerMenuViewController.m in Sources */,
 				6C831A0E1BA88FDD0064CEA3 /* Question.m in Sources */,
 				6C831A1D1BA8ECFB0064CEA3 /* WebViewController.m in Sources */,
