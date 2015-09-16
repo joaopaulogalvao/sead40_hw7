@@ -190,15 +190,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="6ub-oQ-u12">
-                                <rect key="frame" x="0.0" y="82" width="600" height="518"/>
+                                <rect key="frame" x="0.0" y="116" width="600" height="484"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="H7V-Lg-exb">
+                                <rect key="frame" x="0.0" y="72" width="600" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="0.5" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="6ub-oQ-u12" firstAttribute="top" secondItem="p5V-rQ-eh2" secondAttribute="bottom" constant="62" id="4r5-64-ubj"/>
+                            <constraint firstItem="6ub-oQ-u12" firstAttribute="top" secondItem="H7V-Lg-exb" secondAttribute="bottom" id="3ri-wl-aV3"/>
                             <constraint firstItem="eEB-Kq-oAz" firstAttribute="top" secondItem="6ub-oQ-u12" secondAttribute="bottom" id="5lS-dT-JOS"/>
+                            <constraint firstItem="H7V-Lg-exb" firstAttribute="top" secondItem="p5V-rQ-eh2" secondAttribute="bottom" constant="52" id="CtM-XV-ai1"/>
                             <constraint firstItem="6ub-oQ-u12" firstAttribute="leading" secondItem="Umd-M7-lf2" secondAttribute="leadingMargin" constant="-16" id="DQr-Qh-fZ5"/>
+                            <constraint firstItem="6ub-oQ-u12" firstAttribute="top" secondItem="H7V-Lg-exb" secondAttribute="bottom" id="ZAs-Qc-FZP"/>
+                            <constraint firstItem="H7V-Lg-exb" firstAttribute="leading" secondItem="Umd-M7-lf2" secondAttribute="leadingMargin" constant="-16" id="bI4-4f-jA7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="H7V-Lg-exb" secondAttribute="trailing" constant="-16" id="lkI-ji-caP"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6ub-oQ-u12" secondAttribute="trailing" constant="-16" id="poh-Sn-zA4"/>
                         </constraints>
                     </view>
