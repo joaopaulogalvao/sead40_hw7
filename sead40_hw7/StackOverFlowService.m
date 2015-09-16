@@ -8,11 +8,30 @@
 
 #import "StackOverFlowService.h"
 #import <AFNetworking/AFNetworking.h>
+#import "Question.h"
+#import "QuestionJSONParser.h"
 
 @implementation StackOverFlowService
 
-+(void)questionsForSearchTerm:(NSString *)searchTerm {
++ (void)questionsForSearchTerm:(NSString *)searchTerm completionHandler: (void(^)(NSArray*,NSError*))completionHandler {
+  
   // paste the url here
+  NSString *url = @"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&intitle=swift&site=stackoverflow";
+  
+  AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
+  
+  [manager GET:url parameters:nil success:^ void(AFHTTPRequestOperation * operation, id responseObject) {
+    
+    NSLog(@"%ld",operation.response.statusCode);
+    NSLog(@"%@",responseObject);
+    NSArray *questions = [QuestionJSONParser questionsResultsFromJSON:responseObject];
+    
+    completionHandler(questions,nil);
+    
+  } failure:^ void(AFHTTPRequestOperation * operation, NSError * error) {
+    
+  }];
+  
 }
 
 @end

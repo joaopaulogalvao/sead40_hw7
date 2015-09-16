@@ -7,6 +7,7 @@
 //
 
 #import "QuestionSearchViewController.h"
+#import "QuestionJSONParser.h"
 
 @interface QuestionSearchViewController ()
 
@@ -17,6 +18,9 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+  
+  NSDictionary *results = [[NSDictionary alloc]init];
+  NSLog(@"Results: %@",[QuestionJSONParser questionsResultsFromJSON:results]);
 }
 
 - (void)didReceiveMemoryWarning {

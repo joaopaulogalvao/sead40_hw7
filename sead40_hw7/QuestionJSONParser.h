@@ -10,4 +10,6 @@
 
 @interface QuestionJSONParser : NSObject
 
++(NSArray *)questionsResultsFromJSON:(NSDictionary *)jsonInfo;
+
 @end
