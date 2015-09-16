@@ -16,14 +16,16 @@
 + (void)questionsForSearchTerm:(NSString *)searchTerm completionHandler: (void(^)(NSArray*,NSError*))completionHandler {
   
   // paste the url here
-  NSString *url = @"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&intitle=swift&site=stackoverflow";
+//  NSString *url = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&intitle=%@&site=stackoverflow", searchTerm];
+  NSString *url = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&intitle=%@&site=stackoverflow",searchTerm];
+  
   
   AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
   
   [manager GET:url parameters:nil success:^ void(AFHTTPRequestOperation * operation, id responseObject) {
     
-    NSLog(@"%ld",operation.response.statusCode);
-    NSLog(@"%@",responseObject);
+    NSLog(@"Status Code: %ld",operation.response.statusCode);
+    NSLog(@"Response Object: %@",responseObject);
     NSArray *questions = [QuestionJSONParser questionsResultsFromJSON:responseObject];
     
     completionHandler(questions,nil);

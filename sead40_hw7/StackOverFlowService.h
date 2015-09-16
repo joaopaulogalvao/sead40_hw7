@@ -10,4 +10,6 @@
 
 @interface StackOverFlowService : NSObject
 
++ (void)questionsForSearchTerm:(NSString *)searchTerm completionHandler: (void(^)(NSArray*,NSError*))completionHandler;
+
 @end

@@ -21,7 +21,7 @@
 		6C831A171BA8B5DB0064CEA3 /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A161BA8B5DB0064CEA3 /* MyQuestionsViewController.m */; };
 		6C831A1A1BA8BE180064CEA3 /* StackOverFlowService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A191BA8BE180064CEA3 /* StackOverFlowService.m */; };
 		6C831A1D1BA8ECFB0064CEA3 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A1C1BA8ECFB0064CEA3 /* WebViewController.m */; };
-		6C831A201BA9CCF20064CEA3 /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A1F1BA9CCF20064CEA3 /* MyProfileViewController.m */; };
+		6C831A201BA9CCF20064CEA3 /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A1F1BA9CCF20064CEA3 /* MyProfileViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		6CCEDADE1BA9DBCE00C00615 /* QuestionJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCEDADD1BA9DBCE00C00615 /* QuestionJSONParser.m */; };
 /* End PBXBuildFile section */
 

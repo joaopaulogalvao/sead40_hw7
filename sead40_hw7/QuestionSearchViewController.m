@@ -8,6 +8,7 @@
 
 #import "QuestionSearchViewController.h"
 #import "QuestionJSONParser.h"
+#import "StackOverFlowService.h"
 
 @interface QuestionSearchViewController ()
 
@@ -19,8 +20,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
   
-  NSDictionary *results = [[NSDictionary alloc]init];
-  NSLog(@"Results: %@",[QuestionJSONParser questionsResultsFromJSON:results]);
+ [StackOverFlowService questionsForSearchTerm:nil completionHandler:nil];
+  
 }
 
 - (void)didReceiveMemoryWarning {
