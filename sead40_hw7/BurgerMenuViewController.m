@@ -9,6 +9,7 @@
 #import "BurgerMenuViewController.h"
 #import "QuestionSearchViewController.h"
 #import "MyQuestionsViewController.h"
+#import "WebViewController.h"
 
 CGFloat const kburgerOpenScreenDivider = 3.0;
 CGFloat const kburgerOpenScreenMultiplier = 2.0;
@@ -27,6 +28,7 @@ CGFloat const kburgerButtonHeight = 50.0;
 
 @implementation BurgerMenuViewController
 
+#pragma mark - Life cycle methods
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
@@ -47,7 +49,6 @@ CGFloat const kburgerButtonHeight = 50.0;
   QuestionSearchViewController *questionSearchVC = [self.storyboard instantiateViewControllerWithIdentifier:@"QuestionSearch"];
   
   //Instantiate my questions view
-  
   MyQuestionsViewController *myQuestionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyQuestions"];
   
   
@@ -87,6 +88,22 @@ CGFloat const kburgerButtonHeight = 50.0;
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)viewDidAppear:(BOOL)animated {
+  [super viewDidAppear:animated];
+  
+  //Check if you already have the token
+  
+  
+  if ([[NSUserDefaults standardUserDefaults] stringForKey:@"token"] == nil) {
+    //Present the webView
+    WebViewController *webVC = [[WebViewController alloc] init];
+    [self presentViewController:webVC animated:true completion:nil];
+  }
+  
+  
+}
+
 
 #pragma mark - My actions
 
@@ -211,6 +228,7 @@ CGFloat const kburgerButtonHeight = 50.0;
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
   NSLog(@"%ld",(long)indexPath.row);
   
+  //When selecting a view controller make it the new topViewController
   UIViewController *newVC = self.viewControllers[indexPath.row];
   if (![newVC isEqual:self.topViewController]) {
     [self switchToViewController:newVC];
