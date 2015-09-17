@@ -9,6 +9,7 @@
 #import "QuestionSearchViewController.h"
 #import "QuestionJSONParser.h"
 #import "StackOverFlowService.h"
+#import "QuestionSearchTableViewCell.h"
 #import "Question.h"
 
 @interface QuestionSearchViewController ()<UISearchBarDelegate,UITableViewDataSource,UITableViewDelegate>
@@ -26,6 +27,7 @@
     // Do any additional setup after loading the view.
   self.searchBar.delegate = self;
   self.tableViewSearch.dataSource = self;
+  self.tableViewSearch.delegate = self;
   
  
   
@@ -37,7 +39,28 @@
 }
 
 #pragma mark - UITableViewDataSource
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+  
+  return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+  
+  return self.questions.count;
+}
+
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+  
+  QuestionSearchTableViewCell *searchCell = [self.tableViewSearch dequeueReusableCellWithIdentifier:@"searchCell"];
+  
+  Question *questionSearched = [[Question alloc]init];
+  questionSearched = self.questions[indexPath.row];
+  
+  searchCell.imgViewOwner.image = questionSearched.avatarPic;
+  searchCell.labelQuestionTitle.text = questionSearched.ownerName;
+  searchCell.labelQuestion.text = questionSearched.title;
+  
+  return searchCell;
   
 }
 
@@ -70,6 +93,7 @@
           UIImage *image = [UIImage imageWithData:imageData];
           question.avatarPic = image;
         });
+        [self.tableViewSearch reloadData];
       }
       
       dispatch_group_notify(group, dispatch_get_main_queue(), ^{
@@ -86,6 +110,11 @@
     }
   }];
   
+}
+
+-(void)searchBarCancelButtonClicked:(UISearchBar *)searchBar{
+  
+  [searchBar resignFirstResponder];
 }
 
 /*

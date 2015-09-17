@@ -19,7 +19,12 @@
   // paste the url here
 //  NSString *url = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&intitle=%@&site=stackoverflow", searchTerm];
   
-  NSString *url = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&intitle=%@&site=stackoverflow",searchTerm];
+  NSString *access_token = [[NSUserDefaults standardUserDefaults]objectForKey:@"token"];
+  NSString *key = [NSString stringWithFormat:@"v2sZKSXrki0WtFzerfHrAw(("];
+  
+  NSString *url = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/search?key=%@&access_token=%@&order=desc&sort=activity&intitle=%@&site=stackoverflow",key,access_token,searchTerm];
+  
+  NSLog(@"%@",url);
   
   AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
   

@@ -193,7 +193,7 @@
                                 <rect key="frame" x="0.0" y="116" width="600" height="484"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Ogt-kZ-ldj" customClass="QuestionSearchTableViewCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="searchCell" id="Ogt-kZ-ldj" customClass="QuestionSearchTableViewCell">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ogt-kZ-ldj" id="pY5-Ff-se2">
@@ -201,6 +201,10 @@
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Cuh-mn-MhN">
                                                     <rect key="frame" x="0.0" y="0.0" width="81" height="80"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="80" id="2li-Oi-6Rt"/>
+                                                        <constraint firstAttribute="width" constant="81" id="zeU-Lq-cGK"/>
+                                                    </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pz5-4L-z2U">
                                                     <rect key="frame" x="89" y="8" width="41" height="20"/>
@@ -219,7 +223,6 @@
                                                 <constraint firstItem="Pz5-4L-z2U" firstAttribute="top" secondItem="pY5-Ff-se2" secondAttribute="topMargin" id="5A3-CE-Yfs"/>
                                                 <constraint firstItem="lUL-SV-bbh" firstAttribute="bottom" secondItem="pY5-Ff-se2" secondAttribute="bottomMargin" id="Cl8-ui-Jgt"/>
                                                 <constraint firstItem="lUL-SV-bbh" firstAttribute="trailing" secondItem="pY5-Ff-se2" secondAttribute="trailingMargin" id="Kik-Kj-38Z"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="Pz5-4L-z2U" secondAttribute="trailing" constant="462" id="Tct-HA-wHI"/>
                                                 <constraint firstItem="lUL-SV-bbh" firstAttribute="top" secondItem="Pz5-4L-z2U" secondAttribute="bottom" constant="8" id="bjJ-Vs-qFb"/>
                                                 <constraint firstItem="Cuh-mn-MhN" firstAttribute="leading" secondItem="pY5-Ff-se2" secondAttribute="leadingMargin" constant="-8" id="buX-fw-e8a"/>
                                                 <constraint firstItem="Cuh-mn-MhN" firstAttribute="top" secondItem="pY5-Ff-se2" secondAttribute="topMargin" constant="-8" id="fhF-Bh-GJ0"/>
@@ -236,7 +239,7 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="H7V-Lg-exb">
+                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="H7V-Lg-exb">
                                 <rect key="frame" x="0.0" y="72" width="600" height="44"/>
                                 <textInputTraits key="textInputTraits"/>
                             </searchBar>
