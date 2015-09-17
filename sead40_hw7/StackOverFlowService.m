@@ -32,6 +32,23 @@
     
   } failure:^ void(AFHTTPRequestOperation * operation, NSError * error) {
     
+    if (operation.response) {
+      NSError *stackOverflowError = [self errorForStatusCode:operation.response.statusCode];
+      //
+      //      [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+      //        completionHandler(nil,stackOverflowError);
+      //      }]; SAME THING
+      
+      dispatch_async(dispatch_get_main_queue(), ^{
+        completionHandler(nil,stackOverflowError);
+      });
+    } else {
+      NSError *reachabilityError = [self checkReachability];
+      if (reachabilityError) {
+        completionHandler(nil, reachabilityError);
+      }
+    }
+    
   }];
   
 }

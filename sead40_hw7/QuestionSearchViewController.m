@@ -9,8 +9,11 @@
 #import "QuestionSearchViewController.h"
 #import "QuestionJSONParser.h"
 #import "StackOverFlowService.h"
+#import "Question.h"
 
-@interface QuestionSearchViewController ()
+@interface QuestionSearchViewController ()<UISearchBarDelegate>
+
+@property (strong,nonatomic) NSArray *questions;
 
 @end
 
@@ -20,13 +23,23 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
   
- [StackOverFlowService questionsForSearchTerm:nil completionHandler:nil];
+ //[StackOverFlowService questionsForSearchTerm:nil completionHandler:nil];
   
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UISearchBarDelegate
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
+  
+  [StackOverFlowService questionsForSearchTerm:searchBar.text completionHandler:^(NSArray *results, NSError *error) {
+    NSLog(@"%@",self.questions);
+    self.questions = results;
+  }];
+  
 }
 
 /*
