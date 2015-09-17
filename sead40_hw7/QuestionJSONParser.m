@@ -24,7 +24,7 @@
     Question *question = [[Question alloc] init];
     question.title = item[@"title"];
     NSDictionary *owner = item[@"owner"];
-    question.ownerName = item[@"display_name"];
+    question.ownerName = owner[@"display_name"];
     question.avatarURL = owner[@"profile_image"];
     [questions addObject:question];
     
