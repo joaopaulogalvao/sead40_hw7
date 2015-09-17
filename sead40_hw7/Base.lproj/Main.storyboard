@@ -210,6 +210,9 @@
                             <constraint firstAttribute="trailingMargin" secondItem="6ub-oQ-u12" secondAttribute="trailing" constant="-16" id="poh-Sn-zA4"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="H7V-Lg-exb" id="HXr-Ls-Vcl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yLC-Hd-X3F" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

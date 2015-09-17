@@ -10,4 +10,6 @@
 
 @implementation Errors
 
+NSString *const kStackOverFlowErrorDomain = @"com.codefellows.stackoverflow";
+
 @end

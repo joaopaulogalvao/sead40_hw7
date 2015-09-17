@@ -14,6 +14,7 @@
 @interface QuestionSearchViewController ()<UISearchBarDelegate>
 
 @property (strong,nonatomic) NSArray *questions;
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end
 
@@ -22,6 +23,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+//  [self searchBarSearchButtonClicked:self.searchBar];
+  self.searchBar.delegate = self;
   
  //[StackOverFlowService questionsForSearchTerm:nil completionHandler:nil];
   
@@ -35,9 +38,46 @@
 #pragma mark - UISearchBarDelegate
 -(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar{
   
-  [StackOverFlowService questionsForSearchTerm:searchBar.text completionHandler:^(NSArray *results, NSError *error) {
-    NSLog(@"%@",self.questions);
-    self.questions = results;
+  NSString *searchTerm = self.searchBar.text;
+  
+  [StackOverFlowService questionsForSearchTerm:searchTerm completionHandler:^(NSArray *results, NSError *error) {
+    if (error) {
+      
+      UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Error" message:error.localizedDescription preferredStyle:UIAlertControllerStyleAlert];
+      UIAlertAction *action = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:^(UIAlertAction *  action) {
+        [alertController dismissViewControllerAnimated:true completion:nil];
+      }];
+      [alertController addAction:action];
+      
+      [self presentViewController:alertController animated:true completion:nil];
+    } else {
+      NSLog(@"Search Term: %@",searchTerm);
+      self.questions = results;
+      dispatch_group_t group = dispatch_group_create();
+      dispatch_queue_t imageQueue = dispatch_queue_create("com.codefellows.stackoverflow",DISPATCH_QUEUE_CONCURRENT );
+      
+      for (Question *question in results) {
+        dispatch_group_async(group, imageQueue, ^{
+          NSString *avatarURL = question.avatarURL;
+          NSURL *imageURL = [NSURL URLWithString:avatarURL];
+          NSData *imageData = [NSData dataWithContentsOfURL:imageURL];
+          UIImage *image = [UIImage imageWithData:imageData];
+          question.avatarPic = image;
+        });
+      }
+      
+      dispatch_group_notify(group, dispatch_get_main_queue(), ^{
+        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Images Downloaded" message:nil preferredStyle:UIAlertControllerStyleAlert];
+        UIAlertAction *action = [UIAlertAction actionWithTitle:@"Okay" style:UIAlertActionStyleDefault handler:^(UIAlertAction * action) {
+          [alertController dismissViewControllerAnimated:true completion:nil];
+        }];
+        [alertController addAction:action];
+        
+        [self presentViewController:alertController animated:true completion:nil];
+        //self.isDownloading = false;
+        
+      });
+    }
   }];
   
 }

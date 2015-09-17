@@ -10,6 +10,7 @@
 #import <AFNetworking/AFNetworking.h>
 #import "Question.h"
 #import "QuestionJSONParser.h"
+#import "Errors.h"
 
 @implementation StackOverFlowService
 
@@ -17,8 +18,8 @@
   
   // paste the url here
 //  NSString *url = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&intitle=%@&site=stackoverflow", searchTerm];
-  NSString *url = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&intitle=%@&site=stackoverflow",searchTerm];
   
+  NSString *url = [NSString stringWithFormat:@"https://api.stackexchange.com/2.2/search?order=desc&sort=activity&intitle=%@&site=stackoverflow",searchTerm];
   
   AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
   
@@ -53,4 +54,72 @@
   
 }
 
++(NSError *)checkReachability {
+  if (![AFNetworkReachabilityManager sharedManager].reachable) {
+    NSError *error = [NSError errorWithDomain:kStackOverFlowErrorDomain code:StackOverFlowConnectionDown userInfo:@{NSLocalizedDescriptionKey : @"Could not connect to servers, please try again when you have a connection"}];
+    return error;
+  }
+  return nil;
+}
+
++(NSError *)errorForStatusCode:(NSInteger)statusCode {
+  
+  NSInteger errorCode;
+  NSString *localizedDescription;
+  
+  switch (statusCode) {
+    case 502:
+      localizedDescription = @"Too many requests, please slow down";
+      errorCode = StackOverFlowTooManyAttempts;
+      break;
+    case 400:
+      localizedDescription = @"Invalid search term, try another search";
+      errorCode = StackOverFlowInvalidParameter;
+      break;
+    case 401:
+      localizedDescription = @"You must sign in to access this feature";
+      errorCode = StackOverFlowNeedAuthentication;
+      break;
+    default:
+      localizedDescription = @"Could not complete operation, please try again later";
+      errorCode = StackOverFlowGeneralError;
+      break;
+  }
+  NSError *error = [NSError errorWithDomain:kStackOverFlowErrorDomain code:errorCode userInfo:@{NSLocalizedDescriptionKey : localizedDescription}];
+  return error;
+}
+
+
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

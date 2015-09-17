@@ -10,4 +10,15 @@
 
 @interface Errors : NSObject
 
+extern NSString *const kStackOverFlowErrorDomain;
+
+typedef enum : NSUInteger {
+  StackOverFlowBadJSON = 200,
+  StackOverFlowConnectionDown,
+  StackOverFlowTooManyAttempts,
+  StackOverFlowInvalidParameter,
+  StackOverFlowNeedAuthentication,
+  StackOverFlowGeneralError
+} StackOverFlowErrorCodes;
+
 @end
