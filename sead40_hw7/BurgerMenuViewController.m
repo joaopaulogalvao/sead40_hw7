@@ -10,6 +10,7 @@
 #import "QuestionSearchViewController.h"
 #import "MyQuestionsViewController.h"
 #import "WebViewController.h"
+#import "MyProfileViewController.h"
 
 CGFloat const kburgerOpenScreenDivider = 3.0;
 CGFloat const kburgerOpenScreenMultiplier = 2.0;
@@ -51,9 +52,12 @@ CGFloat const kburgerButtonHeight = 50.0;
   //Instantiate my questions view
   MyQuestionsViewController *myQuestionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyQuestions"];
   
+  //Instantiate My Profile view
+  MyProfileViewController *myProfileView = [self.storyboard instantiateViewControllerWithIdentifier:@"MyProfile"];
+  
   
   //Add both views to a view controllers array
-  self.viewControllers = @[questionSearchVC,myQuestionsVC];
+  self.viewControllers = @[questionSearchVC,myQuestionsVC,myProfileView];
   
   //Add question search as a child of the burger view controller
   [self addChildViewController:questionSearchVC];
