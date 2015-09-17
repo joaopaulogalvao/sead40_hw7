@@ -11,10 +11,11 @@
 #import "StackOverFlowService.h"
 #import "Question.h"
 
-@interface QuestionSearchViewController ()<UISearchBarDelegate>
+@interface QuestionSearchViewController ()<UISearchBarDelegate,UITableViewDataSource,UITableViewDelegate>
 
 @property (strong,nonatomic) NSArray *questions;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
+@property (weak, nonatomic) IBOutlet UITableView *tableViewSearch;
 
 @end
 
@@ -23,16 +24,21 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-//  [self searchBarSearchButtonClicked:self.searchBar];
   self.searchBar.delegate = self;
+  self.tableViewSearch.dataSource = self;
   
- //[StackOverFlowService questionsForSearchTerm:nil completionHandler:nil];
+ 
   
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark - UITableViewDataSource
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+  
 }
 
 #pragma mark - UISearchBarDelegate
