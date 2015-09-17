@@ -21,7 +21,10 @@
 		6C831A171BA8B5DB0064CEA3 /* MyQuestionsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A161BA8B5DB0064CEA3 /* MyQuestionsViewController.m */; };
 		6C831A1A1BA8BE180064CEA3 /* StackOverFlowService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A191BA8BE180064CEA3 /* StackOverFlowService.m */; };
 		6C831A1D1BA8ECFB0064CEA3 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A1C1BA8ECFB0064CEA3 /* WebViewController.m */; };
-		6C831A201BA9CCF20064CEA3 /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A1F1BA9CCF20064CEA3 /* MyProfileViewController.m */; };
+		6C831A201BA9CCF20064CEA3 /* MyProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C831A1F1BA9CCF20064CEA3 /* MyProfileViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		6CCEDADE1BA9DBCE00C00615 /* QuestionJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCEDADD1BA9DBCE00C00615 /* QuestionJSONParser.m */; };
+		6CCEDAE11BAA45A000C00615 /* Errors.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCEDAE01BAA45A000C00615 /* Errors.m */; };
+		6CCEDAE41BAB2C9700C00615 /* QuestionSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCEDAE31BAB2C9700C00615 /* QuestionSearchTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +67,12 @@
 		6C831A1C1BA8ECFB0064CEA3 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
 		6C831A1E1BA9CCF20064CEA3 /* MyProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileViewController.h; sourceTree = "<group>"; };
 		6C831A1F1BA9CCF20064CEA3 /* MyProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileViewController.m; sourceTree = "<group>"; };
+		6CCEDADC1BA9DBCE00C00615 /* QuestionJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionJSONParser.h; sourceTree = "<group>"; };
+		6CCEDADD1BA9DBCE00C00615 /* QuestionJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionJSONParser.m; sourceTree = "<group>"; };
+		6CCEDADF1BAA45A000C00615 /* Errors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Errors.h; sourceTree = "<group>"; };
+		6CCEDAE01BAA45A000C00615 /* Errors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Errors.m; sourceTree = "<group>"; };
+		6CCEDAE21BAB2C9700C00615 /* QuestionSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionSearchTableViewCell.h; sourceTree = "<group>"; };
+		6CCEDAE31BAB2C9700C00615 /* QuestionSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionSearchTableViewCell.m; sourceTree = "<group>"; };
 		8291DFA5112FD058EA8FC4E8 /* Pods-sead40_hw7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sead40_hw7.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sead40_hw7/Pods-sead40_hw7.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -153,6 +162,8 @@
 				6C831A0A1BA88D8F0064CEA3 /* User.m */,
 				6C831A0C1BA88FDD0064CEA3 /* Question.h */,
 				6C831A0D1BA88FDD0064CEA3 /* Question.m */,
+				6CCEDAE21BAB2C9700C00615 /* QuestionSearchTableViewCell.h */,
+				6CCEDAE31BAB2C9700C00615 /* QuestionSearchTableViewCell.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -181,6 +192,10 @@
 				6C831A191BA8BE180064CEA3 /* StackOverFlowService.m */,
 				6C831A1B1BA8ECFB0064CEA3 /* WebViewController.h */,
 				6C831A1C1BA8ECFB0064CEA3 /* WebViewController.m */,
+				6CCEDADC1BA9DBCE00C00615 /* QuestionJSONParser.h */,
+				6CCEDADD1BA9DBCE00C00615 /* QuestionJSONParser.m */,
+				6CCEDADF1BAA45A000C00615 /* Errors.h */,
+				6CCEDAE01BAA45A000C00615 /* Errors.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -339,7 +354,10 @@
 			files = (
 				6C831A141BA899030064CEA3 /* QuestionSearchViewController.m in Sources */,
 				6C831A0B1BA88D8F0064CEA3 /* User.m in Sources */,
+				6CCEDADE1BA9DBCE00C00615 /* QuestionJSONParser.m in Sources */,
+				6CCEDAE41BAB2C9700C00615 /* QuestionSearchTableViewCell.m in Sources */,
 				6C831A201BA9CCF20064CEA3 /* MyProfileViewController.m in Sources */,
+				6CCEDAE11BAA45A000C00615 /* Errors.m in Sources */,
 				6C831A111BA8953B0064CEA3 /* BurgerMenuViewController.m in Sources */,
 				6C831A0E1BA88FDD0064CEA3 /* Question.m in Sources */,
 				6C831A1D1BA8ECFB0064CEA3 /* WebViewController.m in Sources */,

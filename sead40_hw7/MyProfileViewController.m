@@ -10,6 +10,8 @@
 
 @interface MyProfileViewController ()
 
+@property (retain, nonatomic) NSString *myName;
+
 @end
 
 @implementation MyProfileViewController
@@ -17,6 +19,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+  
 }
 
 - (void)didReceiveMemoryWarning {
