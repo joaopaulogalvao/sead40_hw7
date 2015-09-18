@@ -11,6 +11,7 @@
 #import "MyQuestionsViewController.h"
 #import "WebViewController.h"
 #import "MyProfileViewController.h"
+#import "AppDelegate.h"
 
 CGFloat const kburgerOpenScreenDivider = 3.0;
 CGFloat const kburgerOpenScreenMultiplier = 2.0;
@@ -18,7 +19,7 @@ NSTimeInterval const ktimeToSlideMenuOpen = 0.3;
 CGFloat const kburgerButtonWidth = 50.0;
 CGFloat const kburgerButtonHeight = 50.0;
 
-@interface BurgerMenuViewController ()<UITableViewDelegate>
+@interface BurgerMenuViewController ()<UITableViewDelegate,UINavigationControllerDelegate>
 
 @property (strong,nonatomic) UIViewController *topViewController;
 @property (strong,nonatomic) UIButton *burgerButton;
@@ -37,14 +38,22 @@ CGFloat const kburgerButtonHeight = 50.0;
   //Instantiate the main menu
   UITableViewController *mainMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainMenu"];
   mainMenuViewController.tableView.delegate = self;
-  UINavigationBar *mainMenuNavBar = [[UINavigationBar alloc]init];
-  [mainMenuViewController.view addSubview:mainMenuNavBar];
   
-  //Add it as a child view controller
+  UINavigationController *navController = [self.storyboard instantiateViewControllerWithIdentifier:@"NavController"];
+  UITableViewController *tableViewController = (UITableViewController *)navController.topViewController;
+  
+  tableViewController.tableView.delegate = self;
+  
+  //Add Main Menu as a child view controller
   [self addChildViewController:mainMenuViewController];
   mainMenuViewController.view.frame = self.view.frame;
   [self.view addSubview:mainMenuViewController.view];
   [mainMenuViewController didMoveToParentViewController:self];
+  
+  [self addChildViewController:navController];
+  navController.view.frame = self.view.frame;
+  [self.view addSubview:navController.view];
+  [navController didMoveToParentViewController:self];
   
   //Instantiate the question search
   QuestionSearchViewController *questionSearchVC = [self.storyboard instantiateViewControllerWithIdentifier:@"QuestionSearch"];

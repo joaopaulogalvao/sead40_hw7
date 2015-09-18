@@ -93,7 +93,7 @@
           UIImage *image = [UIImage imageWithData:imageData];
           question.avatarPic = image;
         });
-        [self.tableViewSearch reloadData];
+        
       }
       
       dispatch_group_notify(group, dispatch_get_main_queue(), ^{
@@ -102,7 +102,7 @@
           [alertController dismissViewControllerAnimated:true completion:nil];
         }];
         [alertController addAction:action];
-        
+        [self.tableViewSearch reloadData];
         [self presentViewController:alertController animated:true completion:nil];
         //self.isDownloading = false;
         

@@ -25,6 +25,7 @@
 		6CCEDADE1BA9DBCE00C00615 /* QuestionJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCEDADD1BA9DBCE00C00615 /* QuestionJSONParser.m */; };
 		6CCEDAE11BAA45A000C00615 /* Errors.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCEDAE01BAA45A000C00615 /* Errors.m */; };
 		6CCEDAE41BAB2C9700C00615 /* QuestionSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCEDAE31BAB2C9700C00615 /* QuestionSearchTableViewCell.m */; };
+		6CCEDAE71BAB8A1E00C00615 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCEDAE61BAB8A1E00C00615 /* MenuTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,8 @@
 		6CCEDAE01BAA45A000C00615 /* Errors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Errors.m; sourceTree = "<group>"; };
 		6CCEDAE21BAB2C9700C00615 /* QuestionSearchTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuestionSearchTableViewCell.h; sourceTree = "<group>"; };
 		6CCEDAE31BAB2C9700C00615 /* QuestionSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionSearchTableViewCell.m; sourceTree = "<group>"; };
+		6CCEDAE51BAB8A1E00C00615 /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
+		6CCEDAE61BAB8A1E00C00615 /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 		8291DFA5112FD058EA8FC4E8 /* Pods-sead40_hw7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sead40_hw7.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sead40_hw7/Pods-sead40_hw7.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -196,6 +199,8 @@
 				6CCEDADD1BA9DBCE00C00615 /* QuestionJSONParser.m */,
 				6CCEDADF1BAA45A000C00615 /* Errors.h */,
 				6CCEDAE01BAA45A000C00615 /* Errors.m */,
+				6CCEDAE51BAB8A1E00C00615 /* MenuTableViewController.h */,
+				6CCEDAE61BAB8A1E00C00615 /* MenuTableViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -364,6 +369,7 @@
 				6C831A1A1BA8BE180064CEA3 /* StackOverFlowService.m in Sources */,
 				6C8319E61BA882580064CEA3 /* AppDelegate.m in Sources */,
 				6C8319E31BA882580064CEA3 /* main.m in Sources */,
+				6CCEDAE71BAB8A1E00C00615 /* MenuTableViewController.m in Sources */,
 				6C831A171BA8B5DB0064CEA3 /* MyQuestionsViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
