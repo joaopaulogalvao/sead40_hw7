@@ -123,7 +123,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myQuestionsCell" id="udY-v7-7Sy">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="myQuestionsCell" id="udY-v7-7Sy" customClass="MyQuestionsTableViewCell">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="udY-v7-7Sy" id="eGq-JZ-eIw">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -160,6 +160,11 @@
                                                 <constraint firstItem="tBl-vh-nNL" firstAttribute="bottom" secondItem="eGq-JZ-eIw" secondAttribute="bottomMargin" id="yHf-EL-2q9"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="imgViewMyQuestions" destination="xEK-Z9-A0p" id="sHZ-IQ-guH"/>
+                                            <outlet property="labelMyQuestions" destination="5sS-Ku-47g" id="17T-lY-97X"/>
+                                            <outlet property="labelMyQuestionsText" destination="tBl-vh-nNL" id="hZr-6A-ZFv"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>

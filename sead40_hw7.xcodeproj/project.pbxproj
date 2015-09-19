@@ -26,6 +26,7 @@
 		6CCEDAE11BAA45A000C00615 /* Errors.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCEDAE01BAA45A000C00615 /* Errors.m */; };
 		6CCEDAE41BAB2C9700C00615 /* QuestionSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCEDAE31BAB2C9700C00615 /* QuestionSearchTableViewCell.m */; };
 		6CCEDAE71BAB8A1E00C00615 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCEDAE61BAB8A1E00C00615 /* MenuTableViewController.m */; };
+		6CD7CA591BACFBF40026AF42 /* MyQuestionsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD7CA581BACFBF40026AF42 /* MyQuestionsTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		6CCEDAE31BAB2C9700C00615 /* QuestionSearchTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuestionSearchTableViewCell.m; sourceTree = "<group>"; };
 		6CCEDAE51BAB8A1E00C00615 /* MenuTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuTableViewController.h; sourceTree = "<group>"; };
 		6CCEDAE61BAB8A1E00C00615 /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
+		6CD7CA571BACFBF40026AF42 /* MyQuestionsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsTableViewCell.h; sourceTree = "<group>"; };
+		6CD7CA581BACFBF40026AF42 /* MyQuestionsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsTableViewCell.m; sourceTree = "<group>"; };
 		8291DFA5112FD058EA8FC4E8 /* Pods-sead40_hw7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sead40_hw7.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sead40_hw7/Pods-sead40_hw7.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +170,8 @@
 				6C831A0D1BA88FDD0064CEA3 /* Question.m */,
 				6CCEDAE21BAB2C9700C00615 /* QuestionSearchTableViewCell.h */,
 				6CCEDAE31BAB2C9700C00615 /* QuestionSearchTableViewCell.m */,
+				6CD7CA571BACFBF40026AF42 /* MyQuestionsTableViewCell.h */,
+				6CD7CA581BACFBF40026AF42 /* MyQuestionsTableViewCell.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -359,6 +364,7 @@
 			files = (
 				6C831A141BA899030064CEA3 /* QuestionSearchViewController.m in Sources */,
 				6C831A0B1BA88D8F0064CEA3 /* User.m in Sources */,
+				6CD7CA591BACFBF40026AF42 /* MyQuestionsTableViewCell.m in Sources */,
 				6CCEDADE1BA9DBCE00C00615 /* QuestionJSONParser.m in Sources */,
 				6CCEDAE41BAB2C9700C00615 /* QuestionSearchTableViewCell.m in Sources */,
 				6C831A201BA9CCF20064CEA3 /* MyProfileViewController.m in Sources */,
