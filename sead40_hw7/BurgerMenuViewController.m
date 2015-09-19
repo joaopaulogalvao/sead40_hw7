@@ -16,8 +16,8 @@
 CGFloat const kburgerOpenScreenDivider = 3.0;
 CGFloat const kburgerOpenScreenMultiplier = 2.0;
 NSTimeInterval const ktimeToSlideMenuOpen = 0.3;
-CGFloat const kburgerButtonWidth = 50.0;
-CGFloat const kburgerButtonHeight = 50.0;
+CGFloat const kburgerButtonWidth = 30.0;
+CGFloat const kburgerButtonHeight = 30.0;
 
 @interface BurgerMenuViewController ()<UITableViewDelegate,UINavigationControllerDelegate>
 
@@ -84,7 +84,7 @@ CGFloat const kburgerButtonHeight = 50.0;
   self.topViewController = questionSearchVC;
   
   //Add the burger button
-  UIButton *burgerButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kburgerButtonWidth, kburgerButtonHeight)];
+  UIButton *burgerButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 20, kburgerButtonWidth, kburgerButtonHeight)];
   [burgerButton setImage:[UIImage imageNamed:@"burger"] forState:UIControlStateNormal];
   [self.topViewController.view addSubview:burgerButton];
   [burgerButton addTarget:self action:@selector(burgerButtonPressed:) forControlEvents:UIControlEventTouchUpInside];

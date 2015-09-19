@@ -8,7 +8,8 @@
 
 #import "MyQuestionsViewController.h"
 
-@interface MyQuestionsViewController ()
+@interface MyQuestionsViewController ()<UIBarPositioningDelegate>
+@property (weak, nonatomic) IBOutlet UITableView *tableViewMyQuestions;
 
 @end
 
@@ -17,12 +18,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+  
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - UIBarPositioningDelegate
+-(UIBarPosition)positionForBar:(id<UIBarPositioning>)bar{
+  
+  return UIBarPositionTopAttached;
+}
+
 
 /*
 #pragma mark - Navigation

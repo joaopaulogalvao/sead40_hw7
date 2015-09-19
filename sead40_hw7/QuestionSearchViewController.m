@@ -12,7 +12,7 @@
 #import "QuestionSearchTableViewCell.h"
 #import "Question.h"
 
-@interface QuestionSearchViewController ()<UISearchBarDelegate,UITableViewDataSource,UITableViewDelegate>
+@interface QuestionSearchViewController ()<UISearchBarDelegate,UITableViewDataSource,UITableViewDelegate,UIBarPositioningDelegate>
 
 @property (strong,nonatomic) NSArray *questions;
 @property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
@@ -29,7 +29,6 @@
   self.tableViewSearch.dataSource = self;
   self.tableViewSearch.delegate = self;
   
- 
   
 }
 
@@ -37,6 +36,11 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+#pragma mark - UIBarPositioningDelegate
+//-(UIBarPosition)positionForBar:(id<UIBarPositioning>)bar{
+//  return UIBarPositionTopAttached;
+//}
 
 #pragma mark - UITableViewDataSource
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
