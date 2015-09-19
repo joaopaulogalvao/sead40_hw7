@@ -7,6 +7,8 @@
 //
 
 #import "MyQuestionsViewController.h"
+#import "MyQuestionsTableViewCell.h"
+#import "Question.h"
 
 @interface MyQuestionsViewController ()<UIBarPositioningDelegate, UITableViewDataSource>
 
@@ -50,6 +52,16 @@
 
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
   
+  MyQuestionsTableViewCell *myQuestionsCell = [self.tableViewMyQuestions dequeueReusableCellWithIdentifier:@"searchCell"];
+  
+  Question *myQuestion = [[Question alloc]init];
+  myQuestion = self.myQuestions[indexPath.row];
+  
+  myQuestionsCell.imgViewMyQuestions.image = myQuestion.avatarPic;
+  myQuestionsCell.labelMyQuestions.text = myQuestion.ownerName;
+  myQuestionsCell.labelMyQuestionsText.text = myQuestion.title;
+  
+  return myQuestionsCell;
 }
 
 /*
