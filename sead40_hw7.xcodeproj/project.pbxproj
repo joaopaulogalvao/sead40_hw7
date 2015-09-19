@@ -27,6 +27,8 @@
 		6CCEDAE41BAB2C9700C00615 /* QuestionSearchTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCEDAE31BAB2C9700C00615 /* QuestionSearchTableViewCell.m */; };
 		6CCEDAE71BAB8A1E00C00615 /* MenuTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CCEDAE61BAB8A1E00C00615 /* MenuTableViewController.m */; };
 		6CD7CA591BACFBF40026AF42 /* MyQuestionsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD7CA581BACFBF40026AF42 /* MyQuestionsTableViewCell.m */; };
+		6CD7CA5C1BACFCB10026AF42 /* MyQuestionsJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD7CA5B1BACFCB10026AF42 /* MyQuestionsJSONParser.m */; };
+		6CD7CA5F1BAD00EE0026AF42 /* MyQuestionsStackOverFlowService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD7CA5E1BAD00EE0026AF42 /* MyQuestionsStackOverFlowService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +81,10 @@
 		6CCEDAE61BAB8A1E00C00615 /* MenuTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuTableViewController.m; sourceTree = "<group>"; };
 		6CD7CA571BACFBF40026AF42 /* MyQuestionsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsTableViewCell.h; sourceTree = "<group>"; };
 		6CD7CA581BACFBF40026AF42 /* MyQuestionsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsTableViewCell.m; sourceTree = "<group>"; };
+		6CD7CA5A1BACFCB10026AF42 /* MyQuestionsJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsJSONParser.h; sourceTree = "<group>"; };
+		6CD7CA5B1BACFCB10026AF42 /* MyQuestionsJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsJSONParser.m; sourceTree = "<group>"; };
+		6CD7CA5D1BAD00EE0026AF42 /* MyQuestionsStackOverFlowService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyQuestionsStackOverFlowService.h; sourceTree = "<group>"; };
+		6CD7CA5E1BAD00EE0026AF42 /* MyQuestionsStackOverFlowService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsStackOverFlowService.m; sourceTree = "<group>"; };
 		8291DFA5112FD058EA8FC4E8 /* Pods-sead40_hw7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sead40_hw7.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sead40_hw7/Pods-sead40_hw7.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -198,10 +204,14 @@
 				6C831A1F1BA9CCF20064CEA3 /* MyProfileViewController.m */,
 				6C831A181BA8BE180064CEA3 /* StackOverFlowService.h */,
 				6C831A191BA8BE180064CEA3 /* StackOverFlowService.m */,
+				6CD7CA5D1BAD00EE0026AF42 /* MyQuestionsStackOverFlowService.h */,
+				6CD7CA5E1BAD00EE0026AF42 /* MyQuestionsStackOverFlowService.m */,
 				6C831A1B1BA8ECFB0064CEA3 /* WebViewController.h */,
 				6C831A1C1BA8ECFB0064CEA3 /* WebViewController.m */,
 				6CCEDADC1BA9DBCE00C00615 /* QuestionJSONParser.h */,
 				6CCEDADD1BA9DBCE00C00615 /* QuestionJSONParser.m */,
+				6CD7CA5A1BACFCB10026AF42 /* MyQuestionsJSONParser.h */,
+				6CD7CA5B1BACFCB10026AF42 /* MyQuestionsJSONParser.m */,
 				6CCEDADF1BAA45A000C00615 /* Errors.h */,
 				6CCEDAE01BAA45A000C00615 /* Errors.m */,
 				6CCEDAE51BAB8A1E00C00615 /* MenuTableViewController.h */,
@@ -364,6 +374,7 @@
 			files = (
 				6C831A141BA899030064CEA3 /* QuestionSearchViewController.m in Sources */,
 				6C831A0B1BA88D8F0064CEA3 /* User.m in Sources */,
+				6CD7CA5F1BAD00EE0026AF42 /* MyQuestionsStackOverFlowService.m in Sources */,
 				6CD7CA591BACFBF40026AF42 /* MyQuestionsTableViewCell.m in Sources */,
 				6CCEDADE1BA9DBCE00C00615 /* QuestionJSONParser.m in Sources */,
 				6CCEDAE41BAB2C9700C00615 /* QuestionSearchTableViewCell.m in Sources */,
@@ -372,6 +383,7 @@
 				6C831A111BA8953B0064CEA3 /* BurgerMenuViewController.m in Sources */,
 				6C831A0E1BA88FDD0064CEA3 /* Question.m in Sources */,
 				6C831A1D1BA8ECFB0064CEA3 /* WebViewController.m in Sources */,
+				6CD7CA5C1BACFCB10026AF42 /* MyQuestionsJSONParser.m in Sources */,
 				6C831A1A1BA8BE180064CEA3 /* StackOverFlowService.m in Sources */,
 				6C8319E61BA882580064CEA3 /* AppDelegate.m in Sources */,
 				6C8319E31BA882580064CEA3 /* main.m in Sources */,
