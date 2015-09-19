@@ -8,8 +8,10 @@
 
 #import "MyQuestionsViewController.h"
 
-@interface MyQuestionsViewController ()<UIBarPositioningDelegate>
+@interface MyQuestionsViewController ()<UIBarPositioningDelegate, UITableViewDataSource>
+
 @property (weak, nonatomic) IBOutlet UITableView *tableViewMyQuestions;
+@property (strong,nonatomic) NSArray *myQuestions;
 
 @end
 
@@ -18,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+  self.tableViewMyQuestions.dataSource = self;
   
 }
 
@@ -32,6 +35,22 @@
   return UIBarPositionTopAttached;
 }
 
+
+#pragma mark - UITableViewDataSource
+
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView{
+  
+  return 1;
+}
+
+-(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+  
+  return self.myQuestions.count;
+}
+
+-(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+  
+}
 
 /*
 #pragma mark - Navigation
