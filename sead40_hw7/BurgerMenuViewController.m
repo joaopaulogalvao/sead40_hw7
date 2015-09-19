@@ -52,6 +52,7 @@ CGFloat const kburgerButtonHeight = 30.0;
   
   [self addChildViewController:navController];
   navController.view.frame = self.view.frame;
+  navController.navigationBar.barTintColor = [UIColor colorWithRed:255.0/255.0 green:127.0/255.0 blue:0/255.0 alpha:1];
   [self.view addSubview:navController.view];
   [navController didMoveToParentViewController:self];
   
