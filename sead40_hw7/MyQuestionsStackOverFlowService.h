@@ -10,4 +10,6 @@
 
 @interface MyQuestionsStackOverFlowService : NSObject
 
++ (void)myAskedQuestions: (void(^)(NSArray*,NSError*))completionHandler;
+
 @end
