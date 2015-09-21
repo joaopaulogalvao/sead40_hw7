@@ -30,6 +30,7 @@
 		6CD7CA5C1BACFCB10026AF42 /* MyQuestionsJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD7CA5B1BACFCB10026AF42 /* MyQuestionsJSONParser.m */; };
 		6CD7CA5F1BAD00EE0026AF42 /* MyQuestionsStackOverFlowService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD7CA5E1BAD00EE0026AF42 /* MyQuestionsStackOverFlowService.m */; };
 		6CFB172C1BAFADC900D1E13E /* MyProfileJSONParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB172B1BAFADC900D1E13E /* MyProfileJSONParser.m */; settings = {ASSET_TAGS = (); }; };
+		6CFB172F1BAFB0FE00D1E13E /* MyProfileStackOverFlowService.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFB172E1BAFB0FE00D1E13E /* MyProfileStackOverFlowService.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,8 @@
 		6CD7CA5E1BAD00EE0026AF42 /* MyQuestionsStackOverFlowService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyQuestionsStackOverFlowService.m; sourceTree = "<group>"; };
 		6CFB172A1BAFADC900D1E13E /* MyProfileJSONParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileJSONParser.h; sourceTree = "<group>"; };
 		6CFB172B1BAFADC900D1E13E /* MyProfileJSONParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileJSONParser.m; sourceTree = "<group>"; };
+		6CFB172D1BAFB0FE00D1E13E /* MyProfileStackOverFlowService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyProfileStackOverFlowService.h; sourceTree = "<group>"; };
+		6CFB172E1BAFB0FE00D1E13E /* MyProfileStackOverFlowService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyProfileStackOverFlowService.m; sourceTree = "<group>"; };
 		8291DFA5112FD058EA8FC4E8 /* Pods-sead40_hw7.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sead40_hw7.debug.xcconfig"; path = "Pods/Target Support Files/Pods-sead40_hw7/Pods-sead40_hw7.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -209,6 +212,8 @@
 				6C831A191BA8BE180064CEA3 /* StackOverFlowService.m */,
 				6CD7CA5D1BAD00EE0026AF42 /* MyQuestionsStackOverFlowService.h */,
 				6CD7CA5E1BAD00EE0026AF42 /* MyQuestionsStackOverFlowService.m */,
+				6CFB172D1BAFB0FE00D1E13E /* MyProfileStackOverFlowService.h */,
+				6CFB172E1BAFB0FE00D1E13E /* MyProfileStackOverFlowService.m */,
 				6C831A1B1BA8ECFB0064CEA3 /* WebViewController.h */,
 				6C831A1C1BA8ECFB0064CEA3 /* WebViewController.m */,
 				6CCEDADC1BA9DBCE00C00615 /* QuestionJSONParser.h */,
@@ -384,6 +389,7 @@
 				6CCEDADE1BA9DBCE00C00615 /* QuestionJSONParser.m in Sources */,
 				6CCEDAE41BAB2C9700C00615 /* QuestionSearchTableViewCell.m in Sources */,
 				6C831A201BA9CCF20064CEA3 /* MyProfileViewController.m in Sources */,
+				6CFB172F1BAFB0FE00D1E13E /* MyProfileStackOverFlowService.m in Sources */,
 				6CCEDAE11BAA45A000C00615 /* Errors.m in Sources */,
 				6C831A111BA8953B0064CEA3 /* BurgerMenuViewController.m in Sources */,
 				6C831A0E1BA88FDD0064CEA3 /* Question.m in Sources */,
