@@ -7,6 +7,7 @@
 //
 
 #import "MyProfileViewController.h"
+#import "MyQuestionsStackOverFlowService.h"
 
 @interface MyProfileViewController ()
 
@@ -19,6 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+  [self loadMyProfile];
   
 }
 
@@ -26,6 +28,17 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+-(void)loadMyProfile{
+  
+  [MyQuestionsStackOverFlowService myAskedQuestions:^(NSArray *results, NSError *error) {
+    
+    
+    
+  }];
+
+}
+
 
 
 /*
