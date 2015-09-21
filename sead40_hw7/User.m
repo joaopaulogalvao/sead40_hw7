@@ -11,7 +11,7 @@
 @implementation User
 
 
--(instancetype)initWithName:(NSString *)username avatarURL:(NSString *)avatarURL reputation:(NSString *)reputation profileImage:(UIImage *)profileImage{
+-(instancetype)initWithName:(NSString *)username avatarURL:(NSString *)avatarURL reputation:(NSNumber *)reputation profileImage:(UIImage *)profileImage{
   
   if (self = [super init]) {
     _username = username;

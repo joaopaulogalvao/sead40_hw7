@@ -13,9 +13,9 @@
 
 @property(strong, nonatomic) NSString *username;
 @property (strong, nonatomic) NSString *avatarURL;
-@property (strong, nonatomic) NSString *reputation;
+@property (strong, nonatomic) NSNumber *reputation;
 @property(strong, nonatomic) UIImage *profileImage;
 
-- (instancetype)initWithName:(NSString *)username avatarURL:(NSString *)avatarURL reputation:(NSString *)reputation profileImage:(UIImage *)profileImage;
+- (instancetype)initWithName:(NSString *)username avatarURL:(NSString *)avatarURL reputation:(NSNumber *)reputation profileImage:(UIImage *)profileImage;
 
 @end
