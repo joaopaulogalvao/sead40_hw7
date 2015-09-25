@@ -62,10 +62,12 @@
           UIImage *image = [UIImage imageWithData:imageData];
           NSString *myUsername = user.username;
           NSNumber *myReputation = user.reputation;
-          user.profileImage = image;
-          self.imgViewMyProfile.image = image;
-          self.labelUsername.text = myUsername;
-          self.labelReputation.text = [NSString stringWithFormat:@"%@",myReputation] ;
+           user.profileImage = image;
+          dispatch_async(dispatch_get_main_queue(), ^{
+            self.imgViewMyProfile.image = image;
+            self.labelUsername.text = myUsername;
+            self.labelReputation.text = [NSString stringWithFormat:@"%@",myReputation] ;
+          });
         });
         
       }
@@ -76,7 +78,8 @@
           [alertController dismissViewControllerAnimated:true completion:nil];
         }];
         [alertController addAction:action];
-        [self presentViewController:alertController animated:true completion:nil];
+        //[self presentViewController:alertController animated:true completion:nil];
+        
         //self.isDownloading = false;
         
       });
