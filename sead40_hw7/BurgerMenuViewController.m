@@ -10,14 +10,16 @@
 #import "QuestionSearchViewController.h"
 #import "MyQuestionsViewController.h"
 #import "WebViewController.h"
+#import "MyProfileViewController.h"
+#import "AppDelegate.h"
 
 CGFloat const kburgerOpenScreenDivider = 3.0;
 CGFloat const kburgerOpenScreenMultiplier = 2.0;
 NSTimeInterval const ktimeToSlideMenuOpen = 0.3;
-CGFloat const kburgerButtonWidth = 50.0;
-CGFloat const kburgerButtonHeight = 50.0;
+CGFloat const kburgerButtonWidth = 30.0;
+CGFloat const kburgerButtonHeight = 30.0;
 
-@interface BurgerMenuViewController ()<UITableViewDelegate>
+@interface BurgerMenuViewController ()<UITableViewDelegate,UINavigationControllerDelegate>
 
 @property (strong,nonatomic) UIViewController *topViewController;
 @property (strong,nonatomic) UIButton *burgerButton;
@@ -36,14 +38,23 @@ CGFloat const kburgerButtonHeight = 50.0;
   //Instantiate the main menu
   UITableViewController *mainMenuViewController = [self.storyboard instantiateViewControllerWithIdentifier:@"MainMenu"];
   mainMenuViewController.tableView.delegate = self;
-  UINavigationBar *mainMenuNavBar = [[UINavigationBar alloc]init];
-  [mainMenuViewController.view addSubview:mainMenuNavBar];
   
-  //Add it as a child view controller
+  UINavigationController *navController = [self.storyboard instantiateViewControllerWithIdentifier:@"NavController"];
+  UITableViewController *tableViewController = (UITableViewController *)navController.topViewController;
+  
+  tableViewController.tableView.delegate = self;
+  
+  //Add Main Menu as a child view controller
   [self addChildViewController:mainMenuViewController];
   mainMenuViewController.view.frame = self.view.frame;
   [self.view addSubview:mainMenuViewController.view];
   [mainMenuViewController didMoveToParentViewController:self];
+  
+  [self addChildViewController:navController];
+  navController.view.frame = self.view.frame;
+  navController.navigationBar.barTintColor = [UIColor colorWithRed:255.0/255.0 green:127.0/255.0 blue:0/255.0 alpha:1];
+  [self.view addSubview:navController.view];
+  [navController didMoveToParentViewController:self];
   
   //Instantiate the question search
   QuestionSearchViewController *questionSearchVC = [self.storyboard instantiateViewControllerWithIdentifier:@"QuestionSearch"];
@@ -51,9 +62,12 @@ CGFloat const kburgerButtonHeight = 50.0;
   //Instantiate my questions view
   MyQuestionsViewController *myQuestionsVC = [self.storyboard instantiateViewControllerWithIdentifier:@"MyQuestions"];
   
+  //Instantiate My Profile view
+  MyProfileViewController *myProfileView = [self.storyboard instantiateViewControllerWithIdentifier:@"MyProfile"];
+  
   
   //Add both views to a view controllers array
-  self.viewControllers = @[questionSearchVC,myQuestionsVC];
+  self.viewControllers = @[questionSearchVC,myQuestionsVC,myProfileView];
   
   //Add question search as a child of the burger view controller
   [self addChildViewController:questionSearchVC];
@@ -71,7 +85,7 @@ CGFloat const kburgerButtonHeight = 50.0;
   self.topViewController = questionSearchVC;
   
   //Add the burger button
-  UIButton *burgerButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, kburgerButtonWidth, kburgerButtonHeight)];
+  UIButton *burgerButton = [[UIButton alloc] initWithFrame:CGRectMake(20, 20, kburgerButtonWidth, kburgerButtonHeight)];
   [burgerButton setImage:[UIImage imageNamed:@"burger"] forState:UIControlStateNormal];
   [self.topViewController.view addSubview:burgerButton];
   [burgerButton addTarget:self action:@selector(burgerButtonPressed:) forControlEvents:UIControlEventTouchUpInside];

@@ -12,8 +12,10 @@
 @interface User : NSObject
 
 @property(strong, nonatomic) NSString *username;
+@property (strong, nonatomic) NSString *avatarURL;
+@property (strong, nonatomic) NSNumber *reputation;
 @property(strong, nonatomic) UIImage *profileImage;
 
-- (instancetype)initWithName:(NSString *)username profileImage:(UIImage *)profileImage;
+- (instancetype)initWithName:(NSString *)username avatarURL:(NSString *)avatarURL reputation:(NSNumber *)reputation profileImage:(UIImage *)profileImage;
 
 @end

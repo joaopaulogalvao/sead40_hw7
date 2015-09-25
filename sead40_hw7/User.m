@@ -11,10 +11,12 @@
 @implementation User
 
 
--(instancetype)initWithName:(NSString *)username profileImage:(UIImage *)profileImage{
+-(instancetype)initWithName:(NSString *)username avatarURL:(NSString *)avatarURL reputation:(NSNumber *)reputation profileImage:(UIImage *)profileImage{
   
   if (self = [super init]) {
     _username = username;
+    _avatarURL = avatarURL;
+    _reputation = reputation;
     _profileImage = profileImage;
     
   }
